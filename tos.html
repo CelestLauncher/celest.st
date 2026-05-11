@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Celest</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --deep: #000000; --sidebar: #08080a; --surface: #0d0d10;
+      --card: #111114; --edge: #1a1a20; --edge-active: #282830;
+      --fg: #f0f0f2; --muted: #888896; --dim: #50505e;
+      --red: #e03a3a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--deep); color: var(--fg);
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 15px; line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--surface); }
+    ::-webkit-scrollbar-thumb { background: var(--edge); border-radius: 3px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      height: 56px; padding: 0 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(0,0,0,.9);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--edge);
+    }
+    .nav-brand { font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--fg); text-decoration: none; }
+    .nav-back { font-size: 12px; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color .15s; font-family: 'JetBrains Mono', monospace; letter-spacing: .04em; }
+    .nav-back:hover { color: var(--fg); }
+    .nav-back svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+    .page { max-width: 720px; margin: 0 auto; padding: 72px 48px 120px; }
+
+    .doc-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); margin-bottom: 20px; }
+    .doc-title { font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 40px); letter-spacing: -.025em; line-height: 1.08; color: var(--fg); margin-bottom: 16px; }
+    .doc-meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--dim); letter-spacing: .06em; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid var(--edge); }
+
+    .doc-warning {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: rgba(224,58,58,.06); border: 1px solid rgba(224,58,58,.15);
+      border-radius: 10px; padding: 20px 22px; margin-bottom: 48px;
+      font-size: 13px; color: var(--muted); line-height: 1.65;
+    }
+    .doc-warning-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; color: var(--red); }
+
+    h2 {
+      font-family: 'Unbounded', sans-serif; font-weight: 800;
+      font-size: 16px; letter-spacing: -.01em; color: var(--fg);
+      margin: 48px 0 16px; padding-top: 8px;
+    }
+    h2:first-of-type { margin-top: 0; }
+    h3 { font-size: 14px; font-weight: 600; color: var(--fg); margin: 28px 0 10px; }
+
+    p { color: var(--muted); margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol { padding-left: 20px; margin-bottom: 16px; }
+    li { color: var(--muted); margin-bottom: 8px; line-height: 1.65; }
+
+    .hl { color: var(--fg); font-weight: 500; }
+
+    .section-divider { border: none; border-top: 1px solid var(--edge); margin: 48px 0; opacity: .5; }
+
+    footer { border-top: 1px solid var(--edge); padding: 28px 48px; }
+    .ft-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .ft-brand { font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--dim); }
+    .ft-links { display: flex; gap: 16px; }
+    .ft-links a { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--dim); text-decoration: none; letter-spacing: .04em; transition: color .15s; }
+    .ft-links a:hover { color: var(--muted); }
+
+    @media (max-width: 640px) {
+      nav, footer { padding-left: 20px; padding-right: 20px; }
+      .page { padding: 48px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Celest</a>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 12 12"><path d="M8 2L4 6l4 4"/></svg>
+    Back to Home
+  </a>
+</nav>
+
+<div class="page">
+  <p class="doc-eyebrow">Legal</p>
+  <h1 class="doc-title">Terms of Service</h1>
+  <p class="doc-meta">Last updated: May 11, 2025 &nbsp;·&nbsp; Effective upon download or use of Celest</p>
+
+  <div class="doc-warning">
+    <span class="doc-warning-icon">⚠</span>
+    <span>Celest is an unofficial third-party Minecraft launcher. It is not affiliated with, endorsed by, or produced by Mojang Studios or Microsoft Corporation. Use of Celest is at your own risk. You are solely responsible for compliance with Mojang's End User License Agreement and Microsoft's Terms of Service.</span>
+  </div>
+
+  <h2>1. Acceptance of Terms</h2>
+  <p>By downloading, installing, or using Celest ("the Software", "the Launcher"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the Software.</p>
+  <p>These Terms apply to all users of Celest, including users who contribute content, information, or other materials through the Software.</p>
+
+  <h2>2. Description of Service</h2>
+  <p>Celest is a free, open-source Minecraft launcher that provides the following functionality:</p>
+  <ul>
+    <li>Launching Minecraft with custom client configurations</li>
+    <li>Managing and installing mods from Modrinth and CurseForge</li>
+    <li>Profile creation, management, and sharing</li>
+    <li>In-game skin and cape management</li>
+    <li>Client spoofing features including Lunar Client emulation</li>
+    <li>Offline (unauthenticated) play support</li>
+    <li>System performance optimization for Java and Minecraft</li>
+  </ul>
+  <p>Celest is currently in <span class="hl">alpha</span>. Features may change, break, or be removed without notice.</p>
+
+  <h2>3. Third-Party Game License</h2>
+  <p>Minecraft is the intellectual property of Mojang Studios, a subsidiary of Microsoft Corporation. To play Minecraft online or in authenticated mode, you must possess a <span class="hl">valid, legitimately purchased Minecraft: Java Edition license</span>.</p>
+  <p>Use of Celest does not grant you a license to Minecraft. You are responsible for obtaining and maintaining a valid Minecraft license in accordance with Mojang's EULA at <span class="hl">account.mojang.com/terms</span>.</p>
+
+  <h2>4. Offline Play &amp; Cracked Accounts</h2>
+  <p>Celest supports offline play and unauthenticated (cracked) account access. This feature is provided for users who:</p>
+  <ul>
+    <li>Own a valid copy of Minecraft and cannot connect to Microsoft authentication servers</li>
+    <li>Wish to test the launcher locally without authentication</li>
+    <li>Operate private LAN servers where account verification is not required</li>
+  </ul>
+  <p><span class="hl">Celest does not endorse or facilitate software piracy.</span> The offline play feature must not be used to circumvent payment for Minecraft. Using Celest to play on servers that require a valid account (without authorization from the server operator) may violate those servers' terms of service.</p>
+
+  <h2>5. Client Spoofing &amp; Lunar Spoof</h2>
+  <p>Celest includes a Lunar Client spoofing feature that causes the launcher to report itself as Lunar Client to game servers. You acknowledge and agree that:</p>
+  <ul>
+    <li><span class="hl">Use of this feature may violate individual server rules.</span> Always review a server's rules before using spoofing features.</li>
+    <li>Celest bears no responsibility for account suspensions, bans, or other penalties imposed by server operators or third-party anti-cheat systems as a result of using this feature.</li>
+    <li>This feature is provided for legitimate compatibility use cases, such as accessing servers that enforce specific client restrictions for non-cheating reasons.</li>
+    <li>Using spoofing features to bypass anti-cheat systems in order to cheat or gain unfair advantages is strictly prohibited and solely the user's responsibility.</li>
+  </ul>
+
+  <h2>6. Mods, Addons &amp; Third-Party Content</h2>
+  <p>Celest enables installation of mods from Modrinth and CurseForge, and supports community-developed addons via the Celest Addon API. You agree that:</p>
+  <ul>
+    <li>Third-party mods and addons are not developed or maintained by Celest.</li>
+    <li>Celest is not responsible for the content, behavior, safety, or legality of any third-party mod, addon, or resource pack.</li>
+    <li>Mods may modify game behavior in ways that conflict with server rules. You are responsible for ensuring mods comply with the rules of any server you play on.</li>
+    <li>Celest does not scan mods for malware. Exercise caution and only install mods from trusted sources.</li>
+  </ul>
+
+  <h2>7. Intellectual Property</h2>
+  <p>Celest, its source code, user interface, branding, and documentation are the property of the Celest project contributors. All rights reserved except as expressly stated.</p>
+  <p>Minecraft, Creeper, and related marks are trademarks of Mojang Studios. Optifine, Fabric, Forge, Sodium, and other mod loader and mod names are trademarks of their respective owners. Celest claims no ownership over any third-party intellectual property.</p>
+
+  <h2>8. Prohibited Uses</h2>
+  <p>You may not use Celest to:</p>
+  <ul>
+    <li>Distribute malware, ransomware, or other malicious software</li>
+    <li>Infringe on the intellectual property rights of Mojang, Microsoft, or any third party</li>
+    <li>Harass, abuse, or harm other players</li>
+    <li>Exploit bugs or vulnerabilities in Minecraft servers for unauthorized access or disruption</li>
+    <li>Distribute cracked or pirated copies of Minecraft</li>
+    <li>Reverse-engineer or tamper with Celest in ways that violate applicable law</li>
+  </ul>
+
+  <h2>9. Disclaimer of Warranties</h2>
+  <p>Celest is provided <span class="hl">"as is" and "as available"</span> without warranty of any kind, express or implied. We do not warrant that:</p>
+  <ul>
+    <li>The Software will be error-free, uninterrupted, or secure</li>
+    <li>Defects will be corrected</li>
+    <li>The Software is compatible with your system or configuration</li>
+    <li>Use of the Software will not result in bans from Minecraft servers or services</li>
+  </ul>
+  <p>Your use of the Software is entirely at your own discretion and risk.</p>
+
+  <h2>10. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by applicable law, Celest and its contributors shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+  <ul>
+    <li>Loss of Minecraft account access or data</li>
+    <li>Bans from servers, platforms, or services</li>
+    <li>Data loss resulting from use of the Software</li>
+    <li>Damages resulting from third-party mods or addons</li>
+    <li>Any other losses arising out of your use or inability to use the Software</li>
+  </ul>
+
+  <h2>11. Indemnification</h2>
+  <p>You agree to indemnify and hold harmless Celest and its contributors from any claims, damages, losses, or expenses (including legal fees) arising from your use of the Software, your violation of these Terms, or your violation of any third-party rights.</p>
+
+  <h2>12. Termination</h2>
+  <p>These Terms remain in effect as long as you use Celest. You may terminate these Terms at any time by uninstalling and ceasing use of the Software. We reserve the right to revoke access or discontinue the Software at any time without notice.</p>
+
+  <h2>13. Changes to These Terms</h2>
+  <p>We may update these Terms from time to time. Continued use of Celest following any changes constitutes your acceptance of the new Terms. The date at the top of this page reflects the most recent revision.</p>
+
+  <h2>14. Governing Law</h2>
+  <p>These Terms are governed by and construed in accordance with applicable law, without regard to conflict of law principles. Any disputes arising from these Terms or your use of Celest shall be resolved in a court of competent jurisdiction.</p>
+
+  <h2>15. Contact</h2>
+  <p>Questions about these Terms? Reach out via our Discord server or GitHub repository.</p>
+</div>
+
+<footer>
+  <div class="ft-inner">
+    <div class="ft-brand">Celest</div>
+    <div class="ft-links">
+      <a href="index.html">Home</a>
+      <a href="tos.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
